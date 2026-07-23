@@ -1,0 +1,25 @@
+{
+  "name": "@vuln/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch --env-file=../../.env src/index.ts",
+    "start": "bun run --env-file=../../.env src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.1.1",
+    "@elysiajs/jwt": "^1.1.1",
+    "@elysiajs/swagger": "^1.1.6",
+    "@vuln/db": "workspace:*",
+    "@vuln/shared": "workspace:*",
+    "drizzle-orm": "^0.36.4",
+    "elysia": "^1.1.26",
+    "elysia-rate-limit": "4.4.0",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "bun-types": "latest"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "vuln-mgmt-system",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "db:generate": "bun --cwd packages/db --env-file=../../.env drizzle-kit generate",
+    "db:migrate": "bun --cwd packages/db --env-file=../../.env src/migrate.ts",
+    "db:seed": "bun --cwd packages/db --env-file=../../.env src/seed.ts",
+    "dev:api": "bun --cwd apps/api dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
